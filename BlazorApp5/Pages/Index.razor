@@ -1,0 +1,23 @@
+﻿@page "/"
+@using BlazorApp5.Data
+
+
+<h1>Builder</h1>
+
+How its work?
+
+<div>
+    <button type="button" class="btn btn-primary" @onclick="() => ModalTemplate.Open()">Click me! (Template)</button>
+    <button type="button" class="btn btn-primary" @onclick="() => HelloWorldModal.Open()">Click me! (Modal)</button>
+</div>
+
+<ModalTemplate @ref="ModalTemplate"></ModalTemplate>
+
+<HelloWorldModal @ref="HelloWorldModal"></HelloWorldModal>
+
+@code
+{
+    public ModalTemplate ModalTemplate { get; set; }
+
+    public HelloWorldModal HelloWorldModal { get; set; }
+}
